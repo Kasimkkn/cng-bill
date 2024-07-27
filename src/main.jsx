@@ -1,4 +1,4 @@
-// index.js or App.js (Entry Point)
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';

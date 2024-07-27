@@ -25,7 +25,7 @@ const Bill = forwardRef((props, ref) => {
                 <div className='w-full text-center items-center flex flex-col gap-3'>
                     <img src="/logo.png" alt="" className='object-cover' />
                     <p className='italic font-semibold'>New Online CNG Kit Fitting & Cylinder Retesting</p>
-                    <p className='topBorder font-bold p-1 w-full bottomBorder'>Chhapi Highway Taj Near Ekta Hotel B.K. 385210 - (Gujarat)</p>
+                    <p className='topBorder font-bold p-1 w-full bottomBorder'>G72 Apple Plaza , Sidhpur , Patan - 384290 (Gujarat)</p>
                 </div>
                 <div>
                     <p className="font-semibold">TAX INVOICE</p>
@@ -38,7 +38,6 @@ const Bill = forwardRef((props, ref) => {
                         <p><span className="font-semibold uppercase">Bill To:</span> {billTo}</p>
                         <p><span className="font-semibold uppercase">Mob:</span> {mobileNo}</p>
                         <p><span className="font-semibold uppercase">Add:</span> {address}</p>
-                        <p><span className="font-semibold uppercase">GST:</span> {gstNo}</p>
                     </div>
                     <div className='leftBorder' style={{ width: '44%' }}>
                         <div className='flex justify-between'>
@@ -105,14 +104,6 @@ const Bill = forwardRef((props, ref) => {
                         <td className="table-cal py-2 text-center"></td>
                         <td className="table-cal py-2 text-center"></td>
                         <td className="table-cal py-2 text-center"></td>
-                        <td className="table-cal table-count py-2 text-center">IGST {igst}%</td>
-                        <td className="table-cal table-count py-2 text-center bg-gray-300">{igstAmount}</td>
-                    </tr>
-                    <tr>
-                        <td className="table-cal py-2 text-center"></td>
-                        <td className="table-cal py-2 text-center"></td>
-                        <td className="table-cal py-2 text-center"></td>
-                        <td className="table-cal py-2 text-center"></td>
                         <td className="table-cal table-count py-2 text-center">TOTAL</td>
                         <td className="table-cal table-count py-2 text-center bg-gray-300">{total}</td>
                     </tr>
@@ -126,14 +117,13 @@ const Bill = forwardRef((props, ref) => {
 
             <div className="mt-4 px-2">
                 <div className='flex justify-between'>
-                    <p>Make All Checks Payable To <span className="font-bold">Mumbai Auto Gas</span></p>
-                    <p>For. Mumbai Auto Gas</p>
+                    <p>Make All Checks Payable To <span className="font-bold">Kadiwala Auto Gas</span></p>
+                    <p>For. Kadiwala Auto Gas</p>
                 </div>
-                <p className="mt-2">GST No: <span className='font-bold'>24FOZPS9363J1ZP</span></p>
+                <p className="mt-2">GST No: <span className='font-bold'>24FZJPR5253K1ZT</span></p>
             </div>
 
             <div className="mt-8 flex justify-center flex-col items-center gap-1">
-                <p className="mt-2">SUBJECT TO PALANPUR JURISDICTION</p>
                 <p className="font-semibold">THANK YOU FOR VISIT AGAIN</p>
             </div>
         </div>

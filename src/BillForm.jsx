@@ -2,10 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { useBillContext } from './BillContext';
 
 const BillForm = () => {
-    const { billData, setBillData } = useBillContext(); // Should work if wrapped correctly
+    const { billData, setBillData } = useBillContext();
     const [formData, setFormData] = useState(billData);
-
-
     useEffect(() => {
         setFormData(billData);
     }, [billData]);
@@ -46,23 +44,19 @@ const BillForm = () => {
         <form className='p-4 flex flex-wrap gap-2'>
             <div className='flex flex-col gap-2'>
                 <label>Bill To:</label>
-                <input type='text' className='input-field' name='billTo' value={formData.billTo} onChange={handleChange} />
+                <input type='text' className='input-field' name='billTo' value={formData.billTo} onChange={handleChange} placeholder='Enter Bill no' />
             </div>
             <div className='flex flex-col gap-2'>
                 <label>Mobile No:</label>
-                <input type='text' className='input-field' name='mobileNo' value={formData.mobileNo} onChange={handleChange} />
+                <input type='text' className='input-field' name='mobileNo' max={10} maxLength={10} value={formData.mobileNo} onChange={handleChange} placeholder='Enter Mobile No' />
             </div>
             <div className='flex flex-col gap-2'>
                 <label>Address:</label>
-                <input type='text' className='input-field' name='address' value={formData.address} onChange={handleChange} />
-            </div>
-            <div className='flex flex-col gap-2'>
-                <label>GST No:</label>
-                <input type='text' className='input-field' name='gstNo' value={formData.gstNo} onChange={handleChange} />
+                <input type='text' className='input-field' name='address' value={formData.address} onChange={handleChange} placeholder='Enter Address' />
             </div>
             <div className='flex flex-col gap-2'>
                 <label>Invoice No:</label>
-                <input type='text' className='input-field' name='invoiceNo' value={formData.invoiceNo} onChange={handleChange} />
+                <input type='text' className='input-field' name='invoiceNo' value={formData.invoiceNo} onChange={handleChange} placeholder='Enter Invoice No' />
             </div>
             <div className='flex flex-col gap-2'>
                 <label>Date:</label>
@@ -70,25 +64,20 @@ const BillForm = () => {
             </div>
             <div className='flex flex-col gap-2'>
                 <label>Vehicle No:</label>
-                <input type='text' className='input-field' name='vehicleNo' value={formData.vehicleNo} onChange={handleChange} />
+                <input type='text' className='input-field' name='vehicleNo' value={formData.vehicleNo} onChange={handleChange} placeholder='Enter Vehicle No' />
             </div>
             <div className='flex flex-col gap-2'>
                 <label>Type of Vehicle:</label>
-                <input type='text' className='input-field' name='typeOfVehicle' value={formData.typeOfVehicle} onChange={handleChange} />
+                <input type='text' className='input-field' name='typeOfVehicle' value={formData.typeOfVehicle} onChange={handleChange} placeholder='Enter Type Of Vehicle' />
             </div>
             <div className='flex flex-col gap-2'>
                 <label>CGST %:</label>
-                <input type='number' className='input-field' name='cgst' value={formData.cgst} onChange={handleChange} />
+                <input type='number' className='input-field' name='cgst' value={formData.cgst} onChange={handleChange} placeholder='Enter CGST' />
             </div>
             <div className='flex flex-col gap-2'>
                 <label>SGST %:</label>
-                <input type='number' className='input-field' name='sgst' value={formData.sgst} onChange={handleChange} />
+                <input type='number' className='input-field' name='sgst' value={formData.sgst} onChange={handleChange} placeholder='Enter SGST' />
             </div>
-            <div className='flex flex-col gap-2'>
-                <label>IGST %:</label>
-                <input type='number' className='input-field' name='igst' value={formData.igst} onChange={handleChange} />
-            </div>
-
             <div className='w-full'>
                 {formData.items.map((item, index) => (
                     <div key={index} className='border border-gray-300 p-1 rounded-sm'>

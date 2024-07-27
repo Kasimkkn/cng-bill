@@ -1,9 +1,7 @@
 import React, { createContext, useContext, useState } from 'react';
 
-// Create the context
 const BillContext = createContext();
 
-// Custom hook for using the context
 export const useBillContext = () => {
     const context = useContext(BillContext);
     if (context === undefined) {
@@ -13,7 +11,6 @@ export const useBillContext = () => {
     return context;
 };
 
-// Provider component
 export const BillProvider = ({ children }) => {
     const [billData, setBillData] = useState({
         billTo: '',
