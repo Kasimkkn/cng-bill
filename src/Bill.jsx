@@ -22,7 +22,7 @@ const Bill = forwardRef((props, ref) => {
     return (
         <div ref={ref} className="py-2 px-4 max-w-4xl mx-auto border border-gray-300">
             <div className="flex flex-col w-full gap-3 justify-between items-center pb-4">
-                <div className='w-full text-center items-center flex flex-col gap-3'>
+                <div className='w-full text-center items-center flex flex-col'>
                     <img src="/logo.png" alt="" className='object-cover w-96' />
                     <p className='italic font-semibold'>New Online CNG Kit Fitting & Cylinder Retesting</p>
                     <p className='topBorder font-bold p-1 w-full bottomBorder'>G72 Apple Plaza , Sidhpur , Patan - 384290 (Gujarat)</p>
