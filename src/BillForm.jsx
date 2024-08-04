@@ -42,64 +42,64 @@ const BillForm = () => {
 
     return (
         <form className='p-4 flex flex-wrap gap-2'>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-2 max-md:w-full'>
                 <label>Bill To:</label>
                 <input type='text' className='input-field' name='billTo' value={formData.billTo} onChange={handleChange} placeholder='Enter Bill no' />
             </div>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-2 max-md:w-full'>
                 <label>Mobile No:</label>
                 <input type='text' className='input-field' name='mobileNo' max={10} maxLength={10} value={formData.mobileNo} onChange={handleChange} placeholder='Enter Mobile No' />
             </div>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-2 max-md:w-full'>
                 <label>Address:</label>
                 <input type='text' className='input-field' name='address' value={formData.address} onChange={handleChange} placeholder='Enter Address' />
             </div>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-2 max-md:w-full'>
                 <label>Invoice No:</label>
                 <input type='text' className='input-field' name='invoiceNo' value={formData.invoiceNo} onChange={handleChange} placeholder='Enter Invoice No' />
             </div>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-2 max-md:w-full'>
                 <label>Date:</label>
                 <input type='date' name='date' className='input-field' value={formData.date} onChange={handleChange} />
             </div>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-2 max-md:w-full'>
                 <label>Vehicle No:</label>
                 <input type='text' className='input-field' name='vehicleNo' value={formData.vehicleNo} onChange={handleChange} placeholder='Enter Vehicle No' />
             </div>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-2 max-md:w-full'>
                 <label>Type of Vehicle:</label>
                 <input type='text' className='input-field' name='typeOfVehicle' value={formData.typeOfVehicle} onChange={handleChange} placeholder='Enter Type Of Vehicle' />
             </div>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-2 max-md:w-full'>
                 <label>CGST %:</label>
                 <input type='number' className='input-field' name='cgst' value={formData.cgst} onChange={handleChange} placeholder='Enter CGST' />
             </div>
-            <div className='flex flex-col gap-2'>
+            <div className='flex flex-col gap-2 max-md:w-full'>
                 <label>SGST %:</label>
                 <input type='number' className='input-field' name='sgst' value={formData.sgst} onChange={handleChange} placeholder='Enter SGST' />
             </div>
             <div className='w-full'>
                 {formData.items.map((item, index) => (
                     <div key={index} className='border border-gray-300 p-1 rounded-sm'>
-                        <h3 className='bg-black text-white text-center'>Item {index + 1}</h3>
-                        <div className='flex flex-wrap gap-2'>
-                            <div className="flex flex-col gap-2">
+                        <h3 className='bg-black text-white text-center p-1 max-md:w-full rounded-md border-none'>Item {index + 1}</h3>
+                        <div className='flex flex-wrap gap-2 max-md:w-full'>
+                            <div className="flex flex-col gap-2 max-md:w-full">
                                 <label>Description:</label>
                                 <input type='text' className='input-field' name='description' value={item.description} onChange={(e) => handleItemChange(index, e)} />
                             </div>
-                            <div className="flex flex-col gap-2">
+                            <div className="flex flex-col gap-2 max-md:w-full">
                                 <label>HSN:</label>
                                 <input type='number' className='input-field' name='hsn' value={item.hsn} onChange={(e) => handleItemChange(index, e)} />
                             </div>
-                            <div className="flex flex-col gap-2">
+                            <div className="flex flex-col gap-2 max-md:w-full">
                                 <label>Qty:</label>
                                 <input type='number' className='input-field' name='qty' value={item.qty} onChange={(e) => handleItemChange(index, e)} />
                             </div>
-                            <div className="flex flex-col gap-2">
+                            <div className="flex flex-col gap-2 max-md:w-full">
                                 <label>Unit Price:</label>
                                 <input type='number' className='input-field' name='unitPrice' value={item.unitPrice} onChange={(e) => handleItemChange(index, e)} />
                             </div>
-                            <div className="flex flex-col gap-2">
+                            <div className="flex flex-col gap-2 max-md:w-full">
                                 <label>Line Total:</label>
                                 <input type='number' className='input-field' name='lineTotal' disabled value={item.lineTotal} onChange={(e) => handleItemChange(index, e)} />
                             </div>
@@ -107,7 +107,7 @@ const BillForm = () => {
                     </div>
                 ))}
                 <button
-                    className='border border-black px-2 py-1 bg-black text-white rounded-md'
+                    className='border-none px-2 py-1 bg-black text-white rounded-md max-md:w-full'
                     type='button' onClick={handleAddItem}>Add Item</button>
             </div>
         </form>

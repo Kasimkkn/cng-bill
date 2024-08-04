@@ -18,11 +18,11 @@ const App = () => {
         className='border border-black px-2 py-1 bg-black text-white rounded-md'
         onClick={handlePrint} disabled={!billData} > Print Bill
       </button>
-      <div className='flex mt-4 justify-between mb-8'>
-        <div className='w-1/2'>
+      <div className='flex mt-4 justify-between mb-8 max-md:flex-col'>
+        <div className='w-1/2 max-md:w-full'>
           <BillForm />
         </div>
-        <div className='w-1/2'>
+        <div className='w-1/2 max-md:w-full'>
           {billData && <Bill ref={billRef} />}
         </div>
       </div>
